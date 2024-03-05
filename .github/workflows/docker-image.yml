@@ -17,7 +17,7 @@ jobs:
       run: | 
         docker version
         # 登录阿里云镜像仓库
-        docker login --username=${{ secrets.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }} github.com/bysx111/bysx321
+        docker login --username=${{ secrets.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }} registry.cn-shenzhen.aliyuncs.com
         # 使用Dockerfile构建镜像
         docker build . --file Dockerfile --tag hanzp
         # 推送镜像到镜像仓库
